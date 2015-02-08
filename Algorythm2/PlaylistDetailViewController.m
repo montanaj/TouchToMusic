@@ -7,6 +7,7 @@
 //
 
 #import "PlaylistDetailViewController.h"
+#import "Playlist.h"
 
 @interface PlaylistDetailViewController ()
 
@@ -16,7 +17,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    //self.view.backgroundColor = [UIColor purpleColor];
+    self.navigationItem.title = @"Artists";
+
+    if (self.playlist) {
+//        self.buttonPressLabel.text = self.playlist.playlistTitle;
+        self.playlistCoverImage.image = self.playlist.playlistIconLarge;
+        self.playlistCoverImage.backgroundColor = self.playlist.backgroundColor;
+        self.playlistDescription.text = self.playlist.playlistDescription;
+        self.playlistTitle.text = self.playlist.playlistTitle;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

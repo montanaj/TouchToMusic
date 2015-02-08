@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  PlayListMasterViewController.h
 //  Algorythm2
 //
 //  Created by Claire on 2/5/15.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface PlaylistMasterViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *aButton;
+@property (weak, nonatomic) IBOutlet UIImageView *placeholderImageValue0;
 
 @end
 
