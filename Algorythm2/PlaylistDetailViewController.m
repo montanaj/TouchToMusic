@@ -26,6 +26,13 @@
         self.playlistCoverImage.backgroundColor = self.playlist.backgroundColor;
         self.playlistDescription.text = self.playlist.playlistDescription;
         self.playlistTitle.text = self.playlist.playlistTitle;
+        
+        self.artistName0.text = self.playlist.playlistArtists[0];
+        self.artistName1.text = self.playlist.playlistArtists[1];
+        self.artistName2.text = self.playlist.playlistArtists[2];
+        self.artistName3.text = self.playlist.playlistArtists[3];
+        self.artistName4.text = self.playlist.playlistArtists[4];
+
     }
 }
 

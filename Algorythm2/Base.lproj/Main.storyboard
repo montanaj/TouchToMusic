@@ -160,6 +160,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="KuA-gk-MvR"/>
                     <connections>
+                        <outlet property="artistName0" destination="vxT-Hd-z9Z" id="aYS-Gt-vLE"/>
+                        <outlet property="artistName1" destination="Uxn-wp-U4b" id="VJH-cm-5yg"/>
+                        <outlet property="artistName2" destination="RGy-lm-9RT" id="ZS6-cY-Cje"/>
+                        <outlet property="artistName3" destination="tG0-Kd-gdf" id="TlM-F2-OBB"/>
+                        <outlet property="artistName4" destination="eSE-Ed-coF" id="nE7-NB-lu8"/>
                         <outlet property="playlistCoverImage" destination="vTc-mI-FcU" id="yla-lP-B4E"/>
                         <outlet property="playlistDescription" destination="Gs7-6e-eaa" id="kR6-j2-dwl"/>
                         <outlet property="playlistTitle" destination="e5R-f2-X6x" id="ew7-99-s4W"/>
