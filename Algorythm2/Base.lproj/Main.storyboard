@@ -18,39 +18,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="q9g-Mz-Qxk">
+                            <imageView contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="q9g-Mz-Qxk">
                                 <rect key="frame" x="60" y="184" width="200" height="200"/>
                                 <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYp-Br-38t">
-                                <rect key="frame" x="137" y="392" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <gestureRecognizers/>
                                 <connections>
-                                    <segue destination="7Ve-1c-0Qr" kind="push" identifier="showPlaylistDetail" id="Ccr-pv-B7D"/>
+                                    <outletCollection property="gestureRecognizers" destination="CqW-A8-wBg" appends="YES" id="LO8-Vd-iLu"/>
                                 </connections>
-                            </button>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.1764705882352941" green="0.18431372549019609" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="AYp-Br-38t" firstAttribute="top" secondItem="q9g-Mz-Qxk" secondAttribute="bottom" constant="8" id="0PF-sT-bhh"/>
                             <constraint firstAttribute="centerY" secondItem="q9g-Mz-Qxk" secondAttribute="centerY" id="HMH-13-OVR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="q9g-Mz-Qxk" secondAttribute="trailing" constant="44" id="OCw-or-X5m"/>
-                            <constraint firstItem="AYp-Br-38t" firstAttribute="top" secondItem="q9g-Mz-Qxk" secondAttribute="bottom" constant="8" id="PoB-oK-tce"/>
                             <constraint firstItem="q9g-Mz-Qxk" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="44" id="dKg-Eb-UUh"/>
-                            <constraint firstAttribute="centerX" secondItem="AYp-Br-38t" secondAttribute="centerX" id="hXb-NI-hdk"/>
                             <constraint firstAttribute="centerX" secondItem="q9g-Mz-Qxk" secondAttribute="centerX" id="p5y-7R-Zxh"/>
                             <constraint firstItem="q9g-Mz-Qxk" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="120" id="rNy-m1-mqT"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="CqW-A8-wBg" appends="YES" id="Fy4-Uc-91T"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="yI5-4m-6Vm"/>
                     <connections>
-                        <outlet property="aButton" destination="AYp-Br-38t" id="Jiy-cn-efE"/>
                         <outlet property="placeholderImageValue0" destination="q9g-Mz-Qxk" id="U0Q-Qz-PQk"/>
+                        <segue destination="7Ve-1c-0Qr" kind="push" identifier="showPlaylistDetail" id="uZR-hk-Ekt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="CqW-A8-wBg">
+                    <connections>
+                        <action selector="showPlaylistDetail:" destination="vXZ-lx-hvc" id="Yco-Ud-Y4r"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="713" y="360"/>
         </scene>

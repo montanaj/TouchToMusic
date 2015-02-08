@@ -19,11 +19,13 @@
 - (void)viewDidLoad {
 
     [super viewDidLoad];
-    //self.view.backgroundColor = [UIColor blueColor];
-    UIColor *buttonColor = [UIColor blueColor];
-    self.aButton.tintColor = buttonColor;
+
+    //ORIGINAL BUTTON SET-UP
+    //UIColor *buttonColor = [UIColor blueColor];
+    //self.aButton.tintColor = buttonColor;
+    //[self.aButton setTitle:@"Press Me!" forState:UIControlStateNormal];
+
     self.navigationItem.title = @"Playlists";
-    [self.aButton setTitle:@"Press Me!" forState:UIControlStateNormal];
 
     self.placeholderImageValue0.layer.cornerRadius = 5;
     Playlist *playlist = [[Playlist alloc] initWithIndex:0];
@@ -45,5 +47,9 @@
         PlaylistDetailViewController *playlistDetailViewController = (PlaylistDetailViewController *)segue.destinationViewController;
         playlistDetailViewController.playlist = [[Playlist alloc] initWithIndex:0];
     }
+}
+
+- (IBAction)showPlaylistDetail:(id)sender {
+    [self performSegueWithIdentifier:@"showPlaylistDetail" sender:sender];
 }
 @end
