@@ -19,18 +19,29 @@
 - (void)viewDidLoad {
 
     [super viewDidLoad];
-
+/*
     //ORIGINAL BUTTON SET-UP
-    //UIColor *buttonColor = [UIColor blueColor];
-    //self.aButton.tintColor = buttonColor;
-    //[self.aButton setTitle:@"Press Me!" forState:UIControlStateNormal];
+    UIColor *buttonColor = [UIColor blueColor];
+    self.aButton.tintColor = buttonColor;
+    [self.aButton setTitle:@"Press Me!" forState:UIControlStateNormal];
 
-    self.navigationItem.title = @"Playlists";
-
+    //ORIGINAL IMAGEVIEW SET-UP
     self.placeholderImageValue0.layer.cornerRadius = 5;
     Playlist *playlist = [[Playlist alloc] initWithIndex:0];
     self.placeholderImageValue0.image = playlist.playlistIcon;
-    
+*/
+    self.navigationItem.title = @"Playlists";
+
+    //CREATING ALL COLLECTION VIEWS - iterate through and create the views
+    for (NSUInteger index = 0; index < self.playlistImageViews.count; index++) {
+
+        //access playlist
+        Playlist *playlist = [[Playlist alloc] initWithIndex:index];
+        //store selected instance (via outletted array) in an imageview instance
+        UIImageView *playlistImageView = self.playlistImageViews[index];
+        playlistImageView.image = playlist.playlistIcon;
+        playlistImageView.backgroundColor = playlist.backgroundColor;
+    }
 
 }
 
