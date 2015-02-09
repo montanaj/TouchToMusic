@@ -53,11 +53,21 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqual:@"showPlaylistDetail"]) {
+
+        //tracking the imageview that triggered the segue
+        UIImageView *playlistImageView = (UIImageView *) [sender view];
+
+        if ([self.playlistImageViews containsObject:playlistImageView]) {
+            //getting the index in the array of image views and storing in index variable
+            NSUInteger index = [self.playlistImageViews indexOfObject:playlistImageView];
+
         //obtain a reference to the DetailViewController
             //and assign that reference to a local variable
         PlaylistDetailViewController *playlistDetailViewController = (PlaylistDetailViewController *)segue.destinationViewController;
-        playlistDetailViewController.playlist = [[Playlist alloc] initWithIndex:0];
-    }
+            //uses index (variable) of clicked upon imageview to link correct index of playlist data
+        playlistDetailViewController.playlist = [[Playlist alloc] initWithIndex:index];
+            }
+        }
 }
 
 - (IBAction)showPlaylistDetail:(id)sender {
